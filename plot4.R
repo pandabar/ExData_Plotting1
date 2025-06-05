@@ -28,6 +28,7 @@ plot(hpcdata$timedate, hpcdata$Sub_metering_1,xlab="", ylab="Energy sub metering
 axis.POSIXct(1, at = c("2007-02-01 00:00:00", "2007-02-02 00:00:00", "2007-02-03 00:00:00"), labels = unique(hpcdata$weekday))
 lines(hpcdata$timedate, hpcdata$Sub_metering_2, col=cols[2])
 lines(hpcdata$timedate, hpcdata$Sub_metering_3, col=cols[3])
+legend(x=as.POSIXct("2007-02-01 17:00:00"), y=38, legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), cex= .9, col=cols, lty=1, bty = "n")
 
 ##4
 plot(hpcdata$timedate, hpcdata$Global_reactive_power,xlab="datetime", ylab="Global_reactive_power", xaxt = "n", type="l")
